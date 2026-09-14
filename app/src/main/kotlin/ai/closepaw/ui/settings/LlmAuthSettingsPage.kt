@@ -69,7 +69,7 @@ enum class LlmAuthTab { SIGN_IN, API_KEY, LOCAL }
  * chat-only path. The rest of the local stack (LFMLLMClient, auto-download,
  * LocalTabContent) stays wired so flipping this is a one-line change.
  */
-private const val LOCAL_TAB_ENABLED = false
+private const val LOCAL_TAB_ENABLED = true
 
 private val VISIBLE_TABS: List<LlmAuthTab> =
     LlmAuthTab.entries.filter { LOCAL_TAB_ENABLED || it != LlmAuthTab.LOCAL }
