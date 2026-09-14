@@ -48,6 +48,7 @@ android {
         debug {
             val evalSsl = project.findProperty("insecureSslForEval")?.toString()?.toBoolean() ?: false
             buildConfigField("boolean", "INSECURE_SSL_FOR_EVAL", evalSsl.toString())
+            applicationIdSuffix = ".local"
         }
         release {
             isMinifyEnabled = true
